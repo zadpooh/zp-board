@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120" height="120" viewBox="0 0 120 120">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #707070;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="60" cy="60" r="60"/>
+  <image x="29" y="33" width="62" height="55" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD4AAAA3CAMAAABjEAm+AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAeFBMVEUAAAD///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////8AAADGFsK+AAAAJnRSTlMAgDS/wOBpa3iFiI+QAZeYmQOlsQayuAq+D8nTEBXYHNygbrDx0DJEW/kAAAABYktHRACIBR1IAAAACXBIWXMAAAsSAAALEgHS3X78AAAA2ElEQVRIx+3SWReBQACG4U+phJCiTQvS//+JRi6MqVmvnGPe25nnzArMthiYFtDJcsstt/xHueMuqTyWe/So60y9Pyjnz60fqOpgfv8rNb3inV/JczUQynUouv+1TK/F77cR663k+aOdSO8i2X+L9nx9kGogPvL0MZZrvlfTxCdzOlHUQHqa6lOqqok/s/qsoYEs/9Z5pqNZr6uBovzostDVtDfRxFdvXV1MNFCPvqrNNPHNMDTGGmi7rhXPuL66cT1X30aI8Xbu+hu7j9Dy/qFdT3Hj/pk/ATOKvmAfzayPAAAAAElFTkSuQmCC"/>
+</svg>

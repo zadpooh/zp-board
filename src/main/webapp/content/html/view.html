@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="그런 사람 또 없습니다 : NINANO">
+	<meta property="og:image" content="">
+	<meta property="og:description" content="">
+
+	<title>그런 사람 또 없습니다 : NINANO</title>
+	<!-- style -->
+	<link rel="stylesheet" href="../css/common.min.css">
+	<!-- js -->
+	<script src="../js/lib/jquery-1.12.3.min.js"></script>
+	<script src="../js/common-front.js"></script>
+</head>
+<body>
+	
+	<a href="#content-main" class="skip-navi">본문 바로가기</a>
+
+	<div class="wrapper">
+		<!-- header // -->
+		<header class="common-header">
+			<h1 class="logo"><a href="./index.html">NINANO</a></h1>
+			
+			<button type="button" class="header-nav-toggle">메뉴 열기/닫기</button>
+			
+			<div class="nav-wrap">
+				<ul class="nav">
+					<li class=""><a href="./about.html">About</a></li>
+					<li class=""><a href="./list-chart.html">ⓝ chart</a></li>
+					<li class=""><a href="./list-hot.html">Hot ⓝple</a></li>
+					<li class=""><a href="./notice-list.html">Notice</a></li>
+					<li class=""><a href="./list-my.html">My List</a></li>
+					<li class=""><a href="#" onclick="alert('준비중입니다'); return false;">월간 니나노</a></li>
+				</ul>
+				<div class="nav-foot">
+					<ul class="util">
+						<li><a href="./login.html">LOGIN</a></li>
+						<li><a href="./join.html">JOIN</a></li>
+						<li><a href="./mypage.html">MYPAGE</a></li>
+					</ul>
+					<ul class="sns">
+						<li><a href="#"><img src="../img/com/ico-sns-facebook.png" alt="facebook"></a></li>
+						<li><a href="#"><img src="../img/com/ico-sns-twitter.png" alt="twitter"></a></li>
+						<li><a href="#"><img src="../img/com/ico-sns-instagram.png" alt="instagram"></a></li>
+						<li><a href="#"><img src="../img/com/ico-sns-youtube.png" alt="youtube"></a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<button type="button" class="header-srch-toggle">검색 열기/닫기</button>
+			
+			<form action="./search-result.html" method="get" class="global-srch-frm header-srch-frm">
+				<fieldset>
+					<legend>통합검색</legend>
+
+					<div class="srch-field">
+						<label for="headerSrchTxt">검색어</label>
+						<input type="text" name="headerSrchTxt" id="headerSrchTxt" placeholder="검색어를 입력하여 주세요." class="srch-txt">
+						<button type="submit" class="btn-submit">검색</button>
+					</div>
+
+					<div class="category">
+						<p class="category-tit">Category</p>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 보컬</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 피아노</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 기타</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 베이스</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 드럼</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> VSTI</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> ETC</label>
+					</div>
+				</fieldset>
+			</form>
+		</header>
+		<!-- // header -->
+
+		<!-- // util -->
+		<div class="common-util">
+			<div class="wrap">
+				<ul class="nav">
+					<li><a href="./login.html">LOGIN</a></li>
+					<li><a href="./join.html">JOIN</a></li>
+					<li><a href="./mypage.html">MYPAGE</a></li>
+				</ul>
+				
+				<button type="button" class="srch-toggle">검색 열기/닫기</button>
+			</div>
+			
+			<form action="./search-result.html" method="get" class="global-srch-frm srch-frm">
+				<fieldset>
+					<legend>통합검색</legend>
+
+					<div class="srch-field">
+						<label for="srchTxt">검색어</label>
+						<input type="text" name="srchTxt" id="srchTxt" placeholder="검색어를 입력하여 주세요." class="srch-txt">
+						<button type="submit" class="btn-submit">검색</button>
+					</div>
+
+					<div class="category">
+						<p class="category-tit">Category</p>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 보컬</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 피아노</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 기타</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 베이스</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 드럼</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> VSTI</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> ETC</label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<!-- util // -->
+
+		<!-- page content // -->
+		<div id="content-main" class="content-wrap">
+			
+	
+	<article class="common-page detail-view">
+		<header class="common-title">
+			<h2 class="title">그런 사람 또 없습니다</h2>
+		</header>
+
+		<div class="view-container">
+			<div class="player-area">
+				<div class="player-wrap">
+					<iframe width="100%" height="100%" src="https://www.youtube.com/embed/tOzfCqoS43I?autoplay=1" frameborder="0" allowfullscreen></iframe>
+					<!--<a href="#" class="btn-download">다운로드</a>-->
+				</div>
+			</div>
+
+			<section class="detail-info">
+				<header class="info-header">
+					<h3 class="section-title">상세정보</h3>
+					<p class="info">등록일 : 2016.11.22 &nbsp;/&nbsp; 조회수 : 257 &nbsp;/&nbsp; <span class="like-num">17</span></p>
+					<p class="author">
+						<i class="ico-user inline" style="background-image: url('../img/com/ico-people.png');"></i>
+						<span class="name">VIVA DANCE STUDIO</span>
+					</p>
+					<p class="action">
+						<a href="#" class="btn-like">좋아요</a>
+						<a href="#" class="btn-like on">좋아요</a>
+						<a href="#" class="btn-put">담기</a>
+						<a href="#" class="btn-share" onclick="$('#popShare').show(); return false;">공유</a>
+						<a href="#" class="btn-post">뽐내기</a>
+						<a href="#" class="btn-comment" onclick="$('html,body').animate({scrollTop: $('.comment').offset().top - 70},300); return false;">댓글</a>
+					</p>
+				</header>
+				
+				<!-- 팝업 : 공유하기  -->
+				<section id="popShare" class="layer-share-pop" style="display: none;">
+					<div class="layer-main">
+						<header class="pop-header">
+							<h4>공유하기</h4>
+							<button type="button" class="close" onclick="$('#popShare').hide();">닫기</button>
+						</header>
+						<div class="con-body">
+							<ul class="share-list">
+								<li><a href="#"><img src="../img/com/ico-share-twitter.png" alt="" class="i"><span class="t">트위터</span></a></li>
+								<li><a href="#"><img src="../img/com/ico-share-facebook.png" alt="" class="i"><span class="t">페이스북</span></a></li>
+								<li><a href="#"><img src="../img/com/ico-share-naver.png" alt="" class="i"><span class="t">네이버</span></a></li>
+								<li><a href="#"><img src="../img/com/ico-share-story.png" alt="" class="i"><span class="t">카카오스토리</span></a></li>
+								<li><a href="#"><img src="../img/com/ico-share-kakao.png" alt="" class="i"><span class="t">카카오톡</span></a></li>
+								<li><a href="#"><img src="../img/com/ico-share-line.png" alt="" class="i"><span class="t">라인</span></a></li>
+							</ul>
+							<div class="url-copy">
+								<input type="text" title="공유URL" class="url">
+								<button type="button" class="btn-url-copy">URL복사</button>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<div class="content-txt">
+					그런 사람 또 없습니다 - 이승철 / 어쿠스틱 버전(MR)<br>
+					연주 - NINANO Band (조영훈)
+				</div>
+			</section>
+
+			<div class="side-area">
+				<div class="related-list">
+					<ul class="tab">
+						<li><a href="#">작성자</a></li>
+						<li><a href="#">같은 노래</a></li>
+					</ul>
+					<div class="tab-con">
+						<h3 class="tab-title">작성자</h3>
+						<ul class="small-content-list">
+							<li>
+								<a href="#">
+									<p class="thumb"><img src="../img/@dummy/thumb3.jpg" alt=""></p>
+									<div class="info-box">
+										<p class="title">금요일에 만나요</p>
+										<p class="info">
+											작성자 : 아이유<br>
+											조회수 : 257
+										</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p class="thumb"><img src="../img/@dummy/thumb3.jpg" alt=""></p>
+									<div class="info-box">
+										<p class="title">금요일에 만나요</p>
+										<p class="info">
+											작성자 : 아이유<br>
+											조회수 : 257
+										</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p class="thumb"><img src="../img/@dummy/thumb3.jpg" alt=""></p>
+									<div class="info-box">
+										<p class="title">금요일에 만나요</p>
+										<p class="info">
+											작성자 : 아이유<br>
+											조회수 : 257
+										</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p class="thumb"><img src="../img/@dummy/thumb3.jpg" alt=""></p>
+									<div class="info-box">
+										<p class="title">금요일에 만나요</p>
+										<p class="info">
+											작성자 : 아이유<br>
+											조회수 : 257
+										</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p class="thumb"><img src="../img/@dummy/thumb3.jpg" alt=""></p>
+									<div class="info-box">
+										<p class="title">금요일에 만나요</p>
+										<p class="info">
+											작성자 : 아이유<br>
+											조회수 : 257
+										</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<button type="button" class="list-more">더보기</button>
+					</div>
+					<div class="tab-con">
+						<h3 class="tab-title">같은 노래</h3>
+						<ul class="small-content-list">
+							<li>
+								<a href="#">
+									<p class="thumb"><img src="../img/@dummy/thumb1.jpg" alt=""></p>
+									<div class="info-box">
+										<p class="title">그런 사람 또 없습니다</p>
+										<p class="info">
+											작성자 : 이승철<br>
+											조회수 : 257
+										</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p class="thumb"><img src="../img/@dummy/thumb1.jpg" alt=""></p>
+									<div class="info-box">
+										<p class="title">그런 사람 또 없습니다</p>
+										<p class="info">
+											작성자 : 이승철<br>
+											조회수 : 257
+										</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p class="thumb"><img src="../img/@dummy/thumb1.jpg" alt=""></p>
+									<div class="info-box">
+										<p class="title">그런 사람 또 없습니다</p>
+										<p class="info">
+											작성자 : 이승철<br>
+											조회수 : 257
+										</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p class="thumb"><img src="../img/@dummy/thumb1.jpg" alt=""></p>
+									<div class="info-box">
+										<p class="title">그런 사람 또 없습니다</p>
+										<p class="info">
+											작성자 : 이승철<br>
+											조회수 : 257
+										</p>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<p class="thumb"><img src="../img/@dummy/thumb1.jpg" alt=""></p>
+									<div class="info-box">
+										<p class="title">그런 사람 또 없습니다</p>
+										<p class="info">
+											작성자 : 이승철<br>
+											조회수 : 257
+										</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<button type="button" class="list-more">더보기</button>
+					</div>
+				</div>
+			</div>
+
+			<script>
+			// 탭메뉴 클릭
+			$('.related-list .tab').on('click', 'a', function(e) {
+				var $thisli = $(this).closest('li');
+				var i = $thisli.index();
+
+				$thisli.addClass('on').siblings().removeClass('on');
+				$(e.delegateTarget).nextAll('.tab-con').hide().eq(i).show();
+
+				e.preventDefault();
+			}).find('a:eq(0)').trigger('click');
+			</script>
+		</div>
+
+		<section class="comment">
+			<header class="comment-header">
+				<h3 class="section-title">
+					댓글
+					<span class="cnt">(총 <span class="num">10</span>개)</span>
+				</h3>
+			</header>
+
+			<form action="commentAction" method="post" class="comment-frm">
+				<fieldset>
+					<legend>댓글 쓰기</legend>
+					<i class="ico-user-big" style="background-image: url('../img/com/ico-people.png');"></i>
+					<label for="commentTxt">댓글내용</label>
+					<textarea name="commentTxt" id="commentTxt" cols="30" rows="10" class="txt-input"></textarea>
+					<button type="submit" class="btn-submit">등록</button>
+				</fieldset>
+			</form>
+			
+			<!-- 댓글 없을 때 -->
+			<ul class="comment-list">
+				<li class="comment-no-list">
+					첫 번째 댓글을 입력하고 응원해주세요.
+				</li>
+			</ul>
+			
+			<ul class="comment-list">
+				<li class="comment-item">
+					<div class="info">
+						<i class="ico-user inline" style="background-image: url('../img/com/ico-people.png');"></i>
+						<span class="name">홍길동</span>
+						<span class="info-txt">등록일 : 2016.11.22</span>
+					</div>
+					<div class="comment-txt">
+						방탄!!! 춰주셔서 감사해요!! 다들 진짜 잘하시는데.. 그 중에서도 모자쓰신 남자분 진짜 잘추시네요! 방탄!!! 춰주셔서 감사해요!! 다들 진짜 잘하시는데.. 그 중에서도 모자쓰신 남자분 진짜 잘추시네요!
+						방탄!!! 춰주셔서 감사해요!! 다들 진짜 잘하시는데.. 그 중에서도 하얀 재킷입으신 분 진짜 잘추시네요! 방탄!!! 춰주셔서 감사해요!! 다들 진짜 잘하시는데.. 그 중에서도 하얀 재킷입으신 분 진짜 잘추시네요!
+					</div>
+				</li>
+				<li class="comment-item">
+					<div class="info">
+						<i class="ico-user inline" style="background-image: url('../img/com/ico-people.png');"></i>
+						<span class="name">홍길동</span>
+						<span class="info-txt">등록일 : 2016.11.22</span>
+					</div>
+					<div class="comment-txt">
+						잘 추시네요!
+					</div>
+				</li>
+			</ul>
+
+			<div class="paging-common">
+				<a href="#" class="page-btn first">처음</a>
+				<a href="#" class="page-btn prev">이전</a>
+				<span class="paging-num">
+					<a href="#" class="on">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+				</span>
+				<a href="#" class="page-btn next">다음</a>
+				<a href="#" class="page-btn last">마지막</a>
+			</div>
+		</section>
+
+	</article>
+
+
+		</div>
+		<!-- // page content -->
+
+		<!-- footer // -->
+		<footer class="common-footer">
+			<h2>푸터</h2>
+			<div class="content-wrap">
+				<ul class="nav">
+					<li><a href="#">회사소개</a></li>
+					<li><a href="./privacy.html">개인정보처리방침</a></li>
+					<li><a href="./license.html">서비스 이용약관</a></li>
+				</ul>
+				<address>
+					<span class="info">
+						(주)니나노 &nbsp;
+						<span class="addr">서울시 서초구 신반포로 320-5 (우)06534 &nbsp; </span>
+						<span class="cs">고객센터 : 000.0000.0000</span>
+					</span><br>
+					<span class="copy">Copyright ⓒ NINANO All rights reserved.</span>
+				</address>
+				<p class="btn-top"><a href="#"><img src="../img/com/btn-footer-top.png" alt="TOP"></a></p>
+				<p class="btn-add"><a href="./content-add.html"><img src="../img/com/btn-footer-add.png" alt="영상 올리기"></a></p>
+			</div>
+		</footer> 
+		<!-- // footer -->
+	</div>
+
+</body>
+</html>

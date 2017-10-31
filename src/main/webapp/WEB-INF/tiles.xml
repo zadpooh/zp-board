@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+			"-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+			"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+			
+	<tiles-definitions>
+	
+        <!-- Templates -->
+<!-- 		<definition name="adnsmanager" template="/WEB-INF/layout/adnsmanager/template.jsp"> -->
+<!-- 			<put-attribute name="header" value="/WEB-INF/layout/adnsmanager/header.jsp" /> -->
+<!-- 			<put-attribute name="top" value="/WEB-INF/layout/adnsmanager/top.jsp" /> -->
+<!-- 			<put-attribute name="left" value="/WEB-INF/layout/adnsmanager/left.jsp" /> -->
+<!-- 			<put-attribute name="bottom" value="/WEB-INF/layout/adnsmanager/bottom.jsp" /> -->
+<!-- 		</definition> -->
+
+        <!-- Pages -->  
+		<definition name="//*/*/*/*/*" template="/WEB-INF/layout/{1}/layout_{3}.jsp" >
+			<put-attribute name="header" value="/WEB-INF/layout/{1}/header.jsp" />
+			<put-attribute name="top" value="/WEB-INF/layout/{1}/top.jsp" />
+			<put-attribute name="left" value="/WEB-INF/layout/{1}/left.jsp" />
+			<put-attribute name="bottom" value="/WEB-INF/layout/{1}/bottom.jsp" />
+			<put-attribute name="body" value="/WEB-INF/{2}/{1}/{4}/{5}.jsp" />
+		</definition>
+		
+		<!-- Pages -->  
+		<definition name="common/error/*" template="/WEB-INF/layout/front/error.jsp">
+			<put-attribute name="body" value="/WEB-INF/jsp/common/error-{1}.jsp" />
+		</definition>
+		
+        <!-- Pages -->  
+<!-- 		<definition name="adnsmanager/default/*/*" extends="adnsmanager"> -->
+<!-- 			<put-attribute name="body" value="/WEB-INF/jsp/adnsmanager/{1}/{2}.jsp" /> -->
+<!-- 		</definition> -->
+
+		
+		
+		<!-- Pages -->  
+<!-- 		<definition name="front/*/popup/*/*" template="/WEB-INF/layout/default/popup.jsp"> -->
+<!-- 			<put-attribute name="header" value="/WEB-INF/layout/default/header.jsp" /> -->
+<!-- 			<put-attribute name="body" value="/WEB-INF/{1}/front/{2}/{3}.jsp" /> -->
+<!-- 		</definition> -->
+		
+		<!-- Pages -->
+<!-- 		<definition name="adnsmanager/*/popup/*/*" template="/WEB-INF/layout/adnsmanager/popup.jsp"> -->
+<!-- 			<put-attribute name="header" value="/WEB-INF/layout/adnsmanager/header.jsp" /> -->
+<!--           	<put-attribute name="body" value="/WEB-INF/{1}/adnsmanager/{2}/{3}.jsp" /> -->
+<!--     	</definition> -->
+    	
+		<!-- Pages -->
+<!-- 		<definition name="front/blank/*/*" template="/WEB-INF/layout/default/blank.jsp"> -->
+<!--           	<put-attribute name="body" value="/WEB-INF/jsp/front/{1}/{2}.jsp" /> -->
+<!--     	</definition> -->
+    	<!-- Pages -->
+<!-- 		<definition name="adnsmanager/blank/*/*" template="/WEB-INF/layout/default/blank.jsp"> -->
+<!--           	<put-attribute name="body" value="/WEB-INF/jsp/adnsmanager/{1}/{2}.jsp" /> -->
+<!--     	</definition> -->
+		
+	</tiles-definitions>

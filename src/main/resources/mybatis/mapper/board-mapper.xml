@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.dn.spring.board.BoardMapper">
+
+	<resultMap id="boardMap" type="com.dn.spring.board.domain.Board">
+		<result property="boardId" column="BOARD_ID" />
+		<result property="boardType" column="BOARD_TYPE" />
+		<result property="boardTitle" column="BOARD_TITLE" />
+		<result property="boardContent" column="BOARD_CONTENT" />
+		<result property="fileName" column="FILE_NAME" />
+		<result property="fileUploadPath" column="FILE_UPLOAD_PATH" />
+		<result property="fileUrl" column="FILE_URL" />
+		<result property="registDe" column="REGIST_DE" />
+		<result property="boardHits" column="BOARD_HITS" />
+		<result property="userId" column="USER_ID" />
+	</resultMap>
+	
+	<sql id="boardWhereQuery">
+		<where>
+			<if test='( where != "" and where != null ) or ( query != "" and query != null )'>
+				AND 
+	    		<choose>
+				    <when test='where == "T"'>
+				        UPPER(BOARD_TITLE)
+				    </when>
+				</choose>
+				
+				LIKE UPPER(CONCAT('%',#{query},'%'))
+			</if>
+		</where>
+	</sql>
+	
+	<select id="selectBoardList" parameterType="com.dn.spring.board.support.BoardParam" resultMap="boardMap">
+		SELECT 
+			BOARD_ID, 
+			BOARD_TITLE, 
+			BOARD_TYPE,
+			FILE_NAME, 
+			FILE_UPLOAD_PATH, 
+			FILE_URL, 
+			DATE_FORMAT(REGIST_DE,'%Y.%m.%d') AS REGIST_DE , 
+			BOARD_HITS, 
+			USER_ID 
+		FROM TB_BOARD
+		<include refid="boardWhereQuery" />
+		ORDER BY REGIST_DE DESC
+		LIMIT #{pagination.startRownum}, #{pagination.endRownum}
+	</select>
+	
+	<select id="selectBoardCount" parameterType="com.dn.spring.board.support.BoardParam" resultType="Integer" >
+		SELECT 
+			COUNT(*)
+		FROM TB_BOARD
+		<include refid="boardWhereQuery" />
+	</select>
+	
+	<select id="selectBoardDetail" parameterType="com.dn.spring.board.support.BoardParam" resultMap="boardMap" >
+		SELECT 
+			BOARD_ID, 
+			BOARD_TYPE,
+			BOARD_TITLE, 
+			BOARD_CONTENT, 
+			FILE_NAME, 
+			FILE_UPLOAD_PATH, 
+			FILE_URL, 
+			DATE_FORMAT(REGIST_DE,'%Y.%m.%d') AS REGIST_DE , 
+			BOARD_HITS, 
+			USER_ID
+		FROM TB_BOARD 
+ 		WHERE BOARD_ID = ${boardId}
+	</select>
+	
+	<insert id="insertBoard" parameterType="com.dn.spring.board.domain.Board">
+		INSERT INTO TB_BOARD (BOARD_TYPE, BOARD_TITLE, BOARD_CONTENT, FILE_NAME, FILE_UPLOAD_PATH, FILE_URL, REGIST_DE, BOARD_HITS, USER_ID)
+		VALUES (#{boardType}, #{boardTitle}, #{boardContent}, #{fileName}, #{fileUploadPath}, #{fileUrl}, NOW(), 0, #{userId})
+	</insert>
+	
+	<update id="updateBoard" parameterType="com.dn.spring.board.domain.Board">
+		UPDATE TB_BOARD SET
+			BOARD_TYPE = #{boardType},
+			BOARD_TITLE = #{boardTitle}, 
+			BOARD_CONTENT = #{boardContent}
+		WHERE BOARD_ID = ${boardId}
+	</update>
+	
+	<delete id="deleteBoard" parameterType="com.dn.spring.board.domain.Board" >
+		DELETE FROM TB_BOARD 
+		WHERE BOARD_ID = ${boardId}
+	</delete>
+	
+	<update id="updateBoardHits" parameterType="com.dn.spring.board.support.BoardParam">
+		UPDATE TB_BOARD SET 
+		BOARD_HITS = BOARD_HITS+1
+		WHERE BOARD_ID = ${boardId}
+	</update>
+	
+</mapper>

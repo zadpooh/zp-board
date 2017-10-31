@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="ⓝ chart : NINANO">
+	<meta property="og:image" content="">
+	<meta property="og:description" content="">
+
+	<title>ⓝ chart : NINANO</title>
+	<!-- style -->
+	<link rel="stylesheet" href="../css/common.min.css">
+	<!-- js -->
+	<script src="../js/lib/jquery-1.12.3.min.js"></script>
+	<script src="../js/common-front.js"></script>
+</head>
+<body>
+	
+	<a href="#content-main" class="skip-navi">본문 바로가기</a>
+
+	<div class="wrapper">
+		<!-- header // -->
+		<header class="common-header">
+			<h1 class="logo"><a href="./index.html">NINANO</a></h1>
+			
+			<button type="button" class="header-nav-toggle">메뉴 열기/닫기</button>
+			
+			<div class="nav-wrap">
+				<ul class="nav">
+					<li class=""><a href="./about.html">About</a></li>
+					<li class="on"><a href="./list-chart.html">ⓝ chart</a></li>
+					<li class=""><a href="./list-hot.html">Hot ⓝple</a></li>
+					<li class=""><a href="./notice-list.html">Notice</a></li>
+					<li class=""><a href="./list-my.html">My List</a></li>
+					<li class=""><a href="#" onclick="alert('준비중입니다'); return false;">월간 니나노</a></li>
+				</ul>
+				<div class="nav-foot">
+					<ul class="util">
+						<li><a href="./login.html">LOGIN</a></li>
+						<li><a href="./join.html">JOIN</a></li>
+						<li><a href="./mypage.html">MYPAGE</a></li>
+					</ul>
+					<ul class="sns">
+						<li><a href="#"><img src="../img/com/ico-sns-facebook.png" alt="facebook"></a></li>
+						<li><a href="#"><img src="../img/com/ico-sns-twitter.png" alt="twitter"></a></li>
+						<li><a href="#"><img src="../img/com/ico-sns-instagram.png" alt="instagram"></a></li>
+						<li><a href="#"><img src="../img/com/ico-sns-youtube.png" alt="youtube"></a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<button type="button" class="header-srch-toggle">검색 열기/닫기</button>
+			
+			<form action="./search-result.html" method="get" class="global-srch-frm header-srch-frm">
+				<fieldset>
+					<legend>통합검색</legend>
+
+					<div class="srch-field">
+						<label for="headerSrchTxt">검색어</label>
+						<input type="text" name="headerSrchTxt" id="headerSrchTxt" placeholder="검색어를 입력하여 주세요." class="srch-txt">
+						<button type="submit" class="btn-submit">검색</button>
+					</div>
+
+					<div class="category">
+						<p class="category-tit">Category</p>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 보컬</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 피아노</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 기타</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 베이스</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 드럼</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> VSTI</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> ETC</label>
+					</div>
+				</fieldset>
+			</form>
+		</header>
+		<!-- // header -->
+
+		<!-- // util -->
+		<div class="common-util">
+			<div class="wrap">
+				<ul class="nav">
+					<li><a href="./login.html">LOGIN</a></li>
+					<li><a href="./join.html">JOIN</a></li>
+					<li><a href="./mypage.html">MYPAGE</a></li>
+				</ul>
+				
+				<button type="button" class="srch-toggle">검색 열기/닫기</button>
+			</div>
+			
+			<form action="./search-result.html" method="get" class="global-srch-frm srch-frm">
+				<fieldset>
+					<legend>통합검색</legend>
+
+					<div class="srch-field">
+						<label for="srchTxt">검색어</label>
+						<input type="text" name="srchTxt" id="srchTxt" placeholder="검색어를 입력하여 주세요." class="srch-txt">
+						<button type="submit" class="btn-submit">검색</button>
+					</div>
+
+					<div class="category">
+						<p class="category-tit">Category</p>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 보컬</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 피아노</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 기타</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 베이스</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 드럼</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> VSTI</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> ETC</label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<!-- util // -->
+
+		<!-- page content // -->
+		<div id="content-main" class="content-wrap">
+			
+	
+	<article class="common-page list-chart">
+		<header class="common-page-title">
+			<h2 class="title">ⓝ chart</h2>
+			<p class="desc">이 공간은 Creator들이 음악영상 콘텐츠 (반주)를 생산하여 게시하는 공간입니다.</p>
+		</header>
+
+		<div class="common-content">
+			<ul class="block-tab-menu">
+				<li class="on"><a href="#">실시간</a></li>
+				<li><a href="#">일간</a></li>
+				<li><a href="#">주간</a></li>
+				<li><a href="#">Best</a></li>
+				<li><a href="#">New</a></li>
+			</ul>
+
+			<div class="list-date">
+				<div class="wrap">
+					<strong class="date">17.03.17 ~ <span class="time">16:00</span></strong>
+
+					<a href="#" class="btn-arw prev">이전</a>
+					<a href="#" class="btn-arw next">다음</a>
+				</div>
+			</div>
+
+			<table class="content-list">
+				<caption>
+					<strong>곡 목록 테이블</strong><br>
+					순위, 곡 정보, 작성자, 원곡가수, 연주, 좋아요, 조회수, 담기, 공유 항목으로 구성
+				</caption>
+				<thead>
+					<tr>
+						<th scope="col" class="num">순위</th>
+						<th scope="col" class="title">곡 정보</th>
+						<th scope="col" class="name">작성자</th>
+						<th scope="col" class="original">원곡가수</th>
+						<th scope="col" class="play">연주</th>
+						<th scope="col" class="like">좋아요</th>
+						<th scope="col" class="view">조회수</th>
+						<th scope="col" class="put">담기</th>
+						<th scope="col" class="share">공유</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="num"><span class="rank-flag rank-1">1</span></td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<p class="thumb"><a href="view.html"><img src="../img/@dummy/thumb11.jpg" alt=""></a></p>
+								<a href="view.html" class="tit">Fine(태연) Piano Cover</a>
+							</div>
+						</td>
+						<td class="name"><div class="ellipsis">니나노</div></td>
+						<td class="original"><div class="ellipsis">태연</div></td>
+						<td class="play">피아노</td>
+						<td class="like">21</td>
+						<td class="view">23450</td>
+						<td class="put"><a href="#" class="btn-list-put">담기</a></td>
+						<td class="share"><a href="#" class="btn-list-share">공유</a></td>
+					</tr>
+					<tr>
+						<td class="num"><span class="rank-flag rank-2">2</span></td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<p class="thumb"><a href="view.html"><img src="../img/@dummy/thumb11.jpg" alt=""></a></p>
+								<a href="view.html" class="tit">Fine(태연) Piano Cover</a>
+							</div>
+						</td>
+						<td class="name"><div class="ellipsis">니나노</div></td>
+						<td class="original"><div class="ellipsis">태연</div></td>
+						<td class="play">피아노</td>
+						<td class="like">21</td>
+						<td class="view">23450</td>
+						<td class="put"><a href="#" class="btn-list-put">담기</a></td>
+						<td class="share"><a href="#" class="btn-list-share">공유</a></td>
+					</tr>
+					<tr>
+						<td class="num"><span class="rank-flag rank-3">3</span></td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<p class="thumb"><a href="view.html"><img src="../img/@dummy/thumb11.jpg" alt=""></a></p>
+								<a href="view.html" class="tit">Fine(태연) Piano Cover</a>
+							</div>
+						</td>
+						<td class="name"><div class="ellipsis">니나노</div></td>
+						<td class="original"><div class="ellipsis">태연</div></td>
+						<td class="play">피아노</td>
+						<td class="like">21</td>
+						<td class="view">23450</td>
+						<td class="put"><a href="#" class="btn-list-put">담기</a></td>
+						<td class="share"><a href="#" class="btn-list-share">공유</a></td>
+					</tr>
+					<tr>
+						<td class="num">4</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<p class="thumb"><a href="view.html"><img src="../img/@dummy/thumb11.jpg" alt=""></a></p>
+								<a href="view.html" class="tit">Fine(태연) Piano Cover</a>
+							</div>
+						</td>
+						<td class="name"><div class="ellipsis">니나노</div></td>
+						<td class="original"><div class="ellipsis">태연</div></td>
+						<td class="play">피아노</td>
+						<td class="like">21</td>
+						<td class="view">23450</td>
+						<td class="put"><a href="#" class="btn-list-put">담기</a></td>
+						<td class="share"><a href="#" class="btn-list-share">공유</a></td>
+					</tr>
+					<tr>
+						<td class="num">5</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<p class="thumb"><a href="view.html"><img src="../img/@dummy/thumb11.jpg" alt=""></a></p>
+								<a href="view.html" class="tit">Fine(태연) Piano Cover</a>
+							</div>
+						</td>
+						<td class="name"><div class="ellipsis">니나노</div></td>
+						<td class="original"><div class="ellipsis">태연</div></td>
+						<td class="play">피아노</td>
+						<td class="like">21</td>
+						<td class="view">23450</td>
+						<td class="put"><a href="#" class="btn-list-put">담기</a></td>
+						<td class="share"><a href="#" class="btn-list-share">공유</a></td>
+					</tr>
+					<tr>
+						<td class="num">6</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<p class="thumb"><a href="view.html"><img src="../img/@dummy/thumb11.jpg" alt=""></a></p>
+								<a href="view.html" class="tit">Fine(태연) Piano Cover</a>
+							</div>
+						</td>
+						<td class="name"><div class="ellipsis">니나노</div></td>
+						<td class="original"><div class="ellipsis">태연</div></td>
+						<td class="play">피아노</td>
+						<td class="like">21</td>
+						<td class="view">23450</td>
+						<td class="put"><a href="#" class="btn-list-put">담기</a></td>
+						<td class="share"><a href="#" class="btn-list-share">공유</a></td>
+					</tr>
+					<tr>
+						<td class="num">7</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<p class="thumb"><a href="view.html"><img src="../img/@dummy/thumb11.jpg" alt=""></a></p>
+								<a href="view.html" class="tit">Fine(태연) Piano Cover</a>
+							</div>
+						</td>
+						<td class="name"><div class="ellipsis">니나노</div></td>
+						<td class="original"><div class="ellipsis">태연</div></td>
+						<td class="play">피아노</td>
+						<td class="like">21</td>
+						<td class="view">23450</td>
+						<td class="put"><a href="#" class="btn-list-put">담기</a></td>
+						<td class="share"><a href="#" class="btn-list-share">공유</a></td>
+					</tr>
+					<tr>
+						<td class="num">8</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<p class="thumb"><a href="view.html"><img src="../img/@dummy/thumb11.jpg" alt=""></a></p>
+								<a href="view.html" class="tit">Fine(태연) Piano Cover</a>
+							</div>
+						</td>
+						<td class="name"><div class="ellipsis">니나노</div></td>
+						<td class="original"><div class="ellipsis">태연</div></td>
+						<td class="play">피아노</td>
+						<td class="like">21</td>
+						<td class="view">23450</td>
+						<td class="put"><a href="#" class="btn-list-put">담기</a></td>
+						<td class="share"><a href="#" class="btn-list-share">공유</a></td>
+					</tr>
+					<tr>
+						<td class="num">9</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<p class="thumb"><a href="view.html"><img src="../img/@dummy/thumb11.jpg" alt=""></a></p>
+								<a href="view.html" class="tit">Fine(태연) Piano Cover</a>
+							</div>
+						</td>
+						<td class="name"><div class="ellipsis">니나노</div></td>
+						<td class="original"><div class="ellipsis">태연</div></td>
+						<td class="play">피아노</td>
+						<td class="like">21</td>
+						<td class="view">23450</td>
+						<td class="put"><a href="#" class="btn-list-put">담기</a></td>
+						<td class="share"><a href="#" class="btn-list-share">공유</a></td>
+					</tr>
+					<tr>
+						<td class="num">10</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<p class="thumb"><a href="view.html"><img src="../img/@dummy/thumb11.jpg" alt=""></a></p>
+								<a href="view.html" class="tit">Fine(태연) Piano Cover</a>
+							</div>
+						</td>
+						<td class="name"><div class="ellipsis">니나노</div></td>
+						<td class="original"><div class="ellipsis">태연</div></td>
+						<td class="play">피아노</td>
+						<td class="like">21</td>
+						<td class="view">23450</td>
+						<td class="put"><a href="#" class="btn-list-put">담기</a></td>
+						<td class="share"><a href="#" class="btn-list-share">공유</a></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<ul class="block-tab-menu rank-page">
+				<li class="on"><a href="#">1 ~ 50위</a></li>
+				<li><a href="#">51 ~ 100위</a></li>
+			</ul>
+		</div>
+	</article>
+
+
+		</div>
+		<!-- // page content -->
+
+		<!-- footer // -->
+		<footer class="common-footer">
+			<h2>푸터</h2>
+			<div class="content-wrap">
+				<ul class="nav">
+					<li><a href="#">회사소개</a></li>
+					<li><a href="./privacy.html">개인정보처리방침</a></li>
+					<li><a href="./license.html">서비스 이용약관</a></li>
+				</ul>
+				<address>
+					<span class="info">
+						(주)니나노 &nbsp;
+						<span class="addr">서울시 서초구 신반포로 320-5 (우)06534 &nbsp; </span>
+						<span class="cs">고객센터 : 000.0000.0000</span>
+					</span><br>
+					<span class="copy">Copyright ⓒ NINANO All rights reserved.</span>
+				</address>
+				<p class="btn-top"><a href="#"><img src="../img/com/btn-footer-top.png" alt="TOP"></a></p>
+				<p class="btn-add"><a href="./content-add.html"><img src="../img/com/btn-footer-add.png" alt="영상 올리기"></a></p>
+			</div>
+		</footer> 
+		<!-- // footer -->
+	</div>
+
+</body>
+</html>

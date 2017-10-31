@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<project name="real" basedir="." default="sftp_upload">
+    <taskdef name="ssh" classname="com.sshtools.ant.Ssh" />
+    <target name="sftp_upload">
+        <ssh host="220.230.122.170"
+             username="root"
+             password="slskshabwlr!"
+             port="2022"
+             version="2"
+        >
+            <sftp action="put" remotedir="/home/ninano" verbose="true" newer="true" depends="yes" >
+                <fileset dir="D:/adnstyle_dev/workspace/zadpooh/ninano/target/spring-boot-adns-0.0.1-SNAPSHOT/" >
+                    <include name="**/*" />
+                    <exclude name="content/js/youtube/**" />
+                </fileset>
+            </sftp>
+            <exec cmd="cd /usr/local/apache-tomcat-8.0.41/bin" />
+            <exec cmd="./shutdown.sh" />
+            <exec cmd="./startup.sh" />
+        </ssh>
+    </target>
+</project>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.dn.spring.category.CategoryMapper">
+	
+	<resultMap id="categoryMap" type="com.dn.spring.category.domain.Category">
+		<result property="categoryId" column="CATEGORY_ID" />
+		<result property="categoryCode" column="CATEGORY_CODE" />
+		<result property="categoryName" column="CATEGORY_NAME" />
+		<result property="userId" column="USER_ID" />
+		<result property="remoteIp" column="REMOTE_IP" />
+		<result property="registDe" column="REGIST_DE" />
+	</resultMap>
+	
+	<resultMap id="categorySubMap" type="com.dn.spring.category.domain.CategorySub">
+		<result property="categorySubCode" column="CATEGORY_SUB_CODE" />
+		<result property="categorySubName" column="CATEGORY_SUB_NAME" />
+	</resultMap>
+	
+	<resultMap id="categoryAndSubMap" type="com.dn.spring.category.domain.Category" extends="categoryMap">
+		<collection property="categorySub" ofType="com.dn.spring.category.domain.CategorySub" resultMap="categorySubMap"/>
+	</resultMap>
+	
+	<!-- <sql id="categoryWhereQuery">
+	</sql> -->
+	
+	<select id="selectCategoryList" parameterType="com.dn.spring.category.support.CategoryParam" resultMap="categoryMap" >
+		SELECT 
+			CATEGORY_ID, 
+			CATEGORY_CODE , 
+			CATEGORY_NAME , 
+			USER_ID , 
+			REMOTE_IP , 
+			REGIST_DE
+		FROM TB_CATEGORY
+		<if test="categoryCode != '' and categoryCode != null">
+			WHERE CATEGORY_CODE LIKE CONCAT('%',#{categoryCode},'%') 
+		</if> 
+	</select>
+	
+	<select id="selectCategoryCount" parameterType="com.dn.spring.category.support.CategoryParam" resultType="Integer" >
+		SELECT 
+			COUNT(*)
+		FROM TB_CATEGORY
+		WHERE CATEGORY_CODE = #{categoryCode}  
+	</select>
+		
+	<select id="selectCategoryLevelList" parameterType="com.dn.spring.category.support.CategoryParam" resultMap="categoryMap" >
+		SELECT 
+			CATEGORY_ID, 
+			CATEGORY_CODE , 
+			CATEGORY_NAME , 
+			USER_ID , 
+			REMOTE_IP , 
+			REGIST_DE
+		FROM TB_CATEGORY 
+		WHERE LENGTH(CATEGORY_CODE)/3 = #{categoryLevel}
+		
+		<if test="categoryCode != '' and categoryCode != null">
+			AND CATEGORY_CODE LIKE CONCAT('%',#{categoryCode},'%') 
+		</if>
+		
+	</select>	
+	
+	<select id="selectCategoryGropList" resultMap="categoryAndSubMap">
+		SELECT 
+			TC_A.* ,
+			TC_B.CATEGORY_CODE AS CATEGORY_SUB_CODE ,
+			TC_B.CATEGORY_NAME AS CATEGORY_SUB_NAME
+		FROM TB_CATEGORY AS TC_A 
+		LEFT JOIN TB_CATEGORY AS TC_B ON SUBSTR(TC_A.CATEGORY_CODE,1,3) = SUBSTR(TC_B.CATEGORY_CODE,1,3) AND LENGTH(TC_B.CATEGORY_CODE)/3 = 2
+		WHERE LENGTH(TC_A.CATEGORY_CODE)/3 = 1
+		ORDER BY TC_A.CATEGORY_CODE DESC , TC_B.CATEGORY_CODE ASC
+	</select>
+	
+	
+</mapper>

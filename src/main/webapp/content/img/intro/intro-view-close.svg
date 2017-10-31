@@ -1,0 +1,23 @@
+<svg id="btn_x" xmlns="http://www.w3.org/2000/svg" width="81" height="81" viewBox="0 0 81 81">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #999;
+        fill-opacity: 0;
+        stroke: #e0e0e0;
+        stroke-linejoin: round;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #e0e0e0;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="40.5" cy="40.5" r="39.5"/>
+  <g id="x">
+    <path id="Rounded_Rectangle_8_copy_4" data-name="Rounded Rectangle 8 copy 4" class="cls-2" d="M1532.64,99.938l-32.61-32.6a1.194,1.194,0,0,0-1.69,0,1.209,1.209,0,0,0,0,1.691l32.61,32.6a1.194,1.194,0,0,0,1.69,0A1.208,1.208,0,0,0,1532.64,99.938Z" transform="translate(-1475 -44)"/>
+    <path id="Rounded_Rectangle_8_copy_5" data-name="Rounded Rectangle 8 copy 5" class="cls-2" d="M1500.03,101.637l32.6-32.6a1.2,1.2,0,1,0-1.69-1.691l-32.61,32.6A1.2,1.2,0,1,0,1500.03,101.637Z" transform="translate(-1475 -44)"/>
+  </g>
+</svg>

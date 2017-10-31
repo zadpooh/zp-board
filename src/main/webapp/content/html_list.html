@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta charset="utf-8">
+
+<title>니나노 - HTML LIST</title>
+
+<style>
+/* Basic Style START (dohoons, 200803, 200908, 201011, 201106, 201305, 201607) */
+html, body { height:100%; -webkit-text-size-adjust:none; font-family:"Malgun Gothic",dotum,"돋움",Sans-serif; font-size:12px; }
+body, input, select, button, textarea, h1, h2, h3, h4, h5, h6, table { line-height:1.5; font:inherit; color:inherit; }
+html, body, div, form, input, select, button, textarea, legend, fieldset, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, blockquote, address, p, th, td, caption { margin:0; padding:0; }
+ol, ul, li { list-style:none; }
+img, fieldset { border:0 none; }
+input, select, textarea { vertical-align:middle; resize:none; }
+input[type=text], input[type=password], input[type=submit], input[type=tel], input[type=number], input[type=email], input[type=url], input[type=search], textarea { -webkit-appearance:none; border-radius:0; }
+button { border:0 none; background:transparent; cursor:pointer; }
+hr { display:none; }
+legend, .hide { width:0; height:0; visibility:hidden; font-size:0; line-height:0; position:absolute; top:0; left:0; overflow:hidden; }
+table caption { width:0; height:0; visibility:hidden; text-indent:-9999px; font-size:0; line-height:0; }
+table { border-collapse:collapse; border-spacing:0; }
+header, footer, section, article, aside, nav, hgroup, details, menu, figure, figcaption { display:block; }
+ 
+a:link, a:visited { text-decoration:none; color:inherit; }
+a:active, a:hover, a:focus { text-decoration:underline; }
+/* Basic Style END */
+
+a:link, a:visited { color:#2d7fe0; }
+a:active, a:hover, a:focus { background:#eee;}
+body { min-width:1280px; color:#666; }
+h1 { padding:10px 20px; font-weight:bold; font-size:16px; color:#999; background: -webkit-gradient(linear, left top, left bottom, from(#ffffff),color-stop(50%, #f3f3f3),color-stop(51%, #ededed),to(#ffffff));background: -webkit-linear-gradient(top, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%);background: linear-gradient(to bottom, #ffffff 0%,#f3f3f3 50%,#ededed 51%,#ffffff 100%); border-bottom:1px solid #eee; box-shadow:0 0 10px rgba(0,0,0,0.1); }
+h2 { padding:0 0 10px; font-size:14px; }
+.container { box-sizing:border-box; padding:20px; overflow:hidden; }
+table { width:100%; font-size:12px; color:#333; table-layout:fixed; border-collapse:collapse; border-spacing:0; border-right:1px solid #ccc; border-bottom:1px solid #ccc; }
+table thead th { padding:5px; background:#f5f5f5; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+table tbody td { padding:10px; word-wrap:break-word; border-left:1px solid #ccc; border-top:1px solid #ccc; }
+table .center { text-align:center; }
+table .group td { border-top:10px solid #eee; }
+</style>
+<script>
+// 모든 링크 새창으로 변경
+function linkTargetChange() {
+	var arr = document.querySelectorAll('a');
+	for(var i=arr.length; i--; ) {
+		arr[i].target = "_blank";
+	}
+}
+
+// 링크 URL 자동
+function setLink() {
+	var arr = document.querySelectorAll('a.path');
+	for(var i=arr.length; i--; ) {
+		arr[i].href = arr[i].innerHTML;
+	}
+}
+
+// 미리보기 URL 설정
+function previewLink() {
+	var arr = document.querySelectorAll('a.preview');
+	var path = location.href.split('/');
+	path.length = path.length - 1;
+	path = path.join('/');
+	for(var i=arr.length; i--; ) {
+		arr[i].href = 'http://troy.labs.daum.net/?url=' 
+			+ encodeURIComponent(path + '/' + arr[i].parentNode.parentNode.querySelector('a.path').getAttribute('href')) 
+			+ '&device=A1549;A1474'; // 아이폰6,아이패드Retina
+	}
+}
+
+window.onload = function() {
+	linkTargetChange();
+	setLink();
+	previewLink();
+};
+</script>
+</head>
+
+<body>
+
+<h1>니나노 - HTML</h1>
+
+<div class="container">
+	<table>
+		<colgroup>
+			<col style="width:110px;">
+			<col style="width:110px;">
+			<col style="width:350px;">
+			<col style="width:350px;">
+			<col style="width:110px;">
+			<col style="width:110px;">
+			<col>
+		</colgroup>
+		<thead>
+			<tr>
+				<th>그룹ID</th>
+				<th>구분</th>
+				<th>페이지명</th>
+				<th>경로</th>
+				<th>화면 미리보기</th>
+				<th>상태</th>
+				<th>비고</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>-</td>
+				<td>공통</td>
+				<td>로그인</td>
+				<td><a href="#auto" class="path">html/login.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td>아이디찾기, 비밀번호찾기 레이어팝업 포함</td>
+			</tr>
+			<tr class="group">
+				<td>main</td>
+				<td>메인</td>
+				<td>인트로</td>
+				<td><a href="#auto" class="path">html/intro.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>main</td>
+				<td>메인</td>
+				<td>메인</td>
+				<td><a href="#auto" class="path">html/index.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr class="group">
+				<td>about</td>
+				<td>소개</td>
+				<td>About</td>
+				<td><a href="#auto" class="path">html/about.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr class="group">
+				<td>view</td>
+				<td>상세페이지</td>
+				<td>상세페이지</td>
+				<td><a href="#auto" class="path">html/view.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr class="group">
+				<td>main</td>
+				<td>회원가입</td>
+				<td>회원가입</td>
+				<td><a href="#auto" class="path">html/join.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>main</td>
+				<td>회원가입</td>
+				<td>회원가입 완료</td>
+				<td><a href="#auto" class="path">html/join-ok.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr class="group">
+				<td>list</td>
+				<td>목록</td>
+				<td>ⓝ chart</td>
+				<td><a href="#auto" class="path">html/list-chart.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>list</td>
+				<td>목록</td>
+				<td>Hot ⓝple</td>
+				<td><a href="#auto" class="path">html/list-hot.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>list</td>
+				<td>목록</td>
+				<td>My List</td>
+				<td><a href="#auto" class="path">html/list-my.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>list</td>
+				<td>목록</td>
+				<td>Search Result</td>
+				<td><a href="#auto" class="path">html/search-result.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr class="group">
+				<td>mypage</td>
+				<td>마이페이지</td>
+				<td>마이페이지</td>
+				<td><a href="#auto" class="path">html/my-profile.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td>팔로잉, 팔로워 레이어팝업 포함</td>
+			</tr>
+			<tr>
+				<td>mypage</td>
+				<td>마이페이지</td>
+				<td>마이페이지 - 정보수정</td>
+				<td><a href="#auto" class="path">html/my-profile-edit.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>mypage</td>
+				<td>마이페이지</td>
+				<td>프로필보기</td>
+				<td><a href="#auto" class="path">html/profile.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td>팔로잉, 팔로워 레이어팝업 포함</td>
+			</tr>
+			<tr>
+				<td>mypage</td>
+				<td>마이페이지</td>
+				<td>영상 등록</td>
+				<td><a href="#auto" class="path">html/content-add.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr class="group">
+				<td>notice</td>
+				<td>공지사항</td>
+				<td>공지사항 - 목록</td>
+				<td><a href="#auto" class="path">html/notice-list.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>notice</td>
+				<td>공지사항</td>
+				<td>공지사항 - 상세</td>
+				<td><a href="#auto" class="path">html/notice-view.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr class="group">
+				<td>etc</td>
+				<td>기타</td>
+				<td>서비스 이용약관</td>
+				<td><a href="#auto" class="path">html/license.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>etc</td>
+				<td>기타</td>
+				<td>개인정보취급방침</td>
+				<td><a href="#auto" class="path">html/privacy.html</a></td>
+				<td class="center"><a href="#auto" class="preview">[미리보기]</a></td>
+				<td class="center">완료</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+</body>
+</html>

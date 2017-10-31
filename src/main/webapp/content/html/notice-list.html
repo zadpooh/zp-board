@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<meta name="format-detection" content="telephone=no">
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Notice : NINANO">
+	<meta property="og:image" content="">
+	<meta property="og:description" content="">
+
+	<title>Notice : NINANO</title>
+	<!-- style -->
+	<link rel="stylesheet" href="../css/common.min.css">
+	<!-- js -->
+	<script src="../js/lib/jquery-1.12.3.min.js"></script>
+	<script src="../js/common-front.js"></script>
+</head>
+<body>
+	
+	<a href="#content-main" class="skip-navi">본문 바로가기</a>
+
+	<div class="wrapper">
+		<!-- header // -->
+		<header class="common-header">
+			<h1 class="logo"><a href="./index.html">NINANO</a></h1>
+			
+			<button type="button" class="header-nav-toggle">메뉴 열기/닫기</button>
+			
+			<div class="nav-wrap">
+				<ul class="nav">
+					<li class=""><a href="./about.html">About</a></li>
+					<li class=""><a href="./list-chart.html">ⓝ chart</a></li>
+					<li class=""><a href="./list-hot.html">Hot ⓝple</a></li>
+					<li class="on"><a href="./notice-list.html">Notice</a></li>
+					<li class=""><a href="./list-my.html">My List</a></li>
+					<li class=""><a href="#" onclick="alert('준비중입니다'); return false;">월간 니나노</a></li>
+				</ul>
+				<div class="nav-foot">
+					<ul class="util">
+						<li><a href="./login.html">LOGIN</a></li>
+						<li><a href="./join.html">JOIN</a></li>
+						<li><a href="./mypage.html">MYPAGE</a></li>
+					</ul>
+					<ul class="sns">
+						<li><a href="#"><img src="../img/com/ico-sns-facebook.png" alt="facebook"></a></li>
+						<li><a href="#"><img src="../img/com/ico-sns-twitter.png" alt="twitter"></a></li>
+						<li><a href="#"><img src="../img/com/ico-sns-instagram.png" alt="instagram"></a></li>
+						<li><a href="#"><img src="../img/com/ico-sns-youtube.png" alt="youtube"></a></li>
+					</ul>
+				</div>
+			</div>
+			
+			<button type="button" class="header-srch-toggle">검색 열기/닫기</button>
+			
+			<form action="./search-result.html" method="get" class="global-srch-frm header-srch-frm">
+				<fieldset>
+					<legend>통합검색</legend>
+
+					<div class="srch-field">
+						<label for="headerSrchTxt">검색어</label>
+						<input type="text" name="headerSrchTxt" id="headerSrchTxt" placeholder="검색어를 입력하여 주세요." class="srch-txt">
+						<button type="submit" class="btn-submit">검색</button>
+					</div>
+
+					<div class="category">
+						<p class="category-tit">Category</p>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 보컬</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 피아노</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 기타</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 베이스</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 드럼</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> VSTI</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> ETC</label>
+					</div>
+				</fieldset>
+			</form>
+		</header>
+		<!-- // header -->
+
+		<!-- // util -->
+		<div class="common-util">
+			<div class="wrap">
+				<ul class="nav">
+					<li><a href="./login.html">LOGIN</a></li>
+					<li><a href="./join.html">JOIN</a></li>
+					<li><a href="./mypage.html">MYPAGE</a></li>
+				</ul>
+				
+				<button type="button" class="srch-toggle">검색 열기/닫기</button>
+			</div>
+			
+			<form action="./search-result.html" method="get" class="global-srch-frm srch-frm">
+				<fieldset>
+					<legend>통합검색</legend>
+
+					<div class="srch-field">
+						<label for="srchTxt">검색어</label>
+						<input type="text" name="srchTxt" id="srchTxt" placeholder="검색어를 입력하여 주세요." class="srch-txt">
+						<button type="submit" class="btn-submit">검색</button>
+					</div>
+
+					<div class="category">
+						<p class="category-tit">Category</p>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 보컬</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 피아노</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 기타</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 베이스</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> 드럼</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> VSTI</label>
+						<label><input type="checkbox" name="srchCate" class="basic-chk"> ETC</label>
+					</div>
+				</fieldset>
+			</form>
+		</div>
+		<!-- util // -->
+
+		<!-- page content // -->
+		<div id="content-main" class="content-wrap">
+			
+	
+	<article class="common-page list-my">
+		<header class="common-page-title">
+			<h2 class="title">Notice</h2>
+			<p class="desc">누구나 참여하여 함께 만들어 가는 오픈형 뮤직 플랫폼 서비스</p>
+		</header>
+
+		<div class="common-content">
+			<form action="" class="list-top-frm">
+				<fieldset>
+					<legend>게시판 검색</legend>
+					<label for="listSrchKeyword">제목</label>
+					<input type="text" id="listSrchKeyword" class="basic-txt keyword">
+					<button type="submit" class="btn primary btn-submit">검색</button>
+				</fieldset>
+			</form>
+
+			<table class="board-list">
+				<caption>
+					<strong>게시판 목록 테이블</strong><br>
+					번호, 제목, 작성일, 조회수 항목으로 구성
+				</caption>
+				<thead>
+					<tr>
+						<th scope="col" class="num">번호</th>
+						<th scope="col" class="title">제목</th>
+						<th scope="col" class="date">작성일</th>
+						<th scope="col" class="cnt">조회수</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td class="num">1</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<a href="notice-view.html" class="tit">[이벤트] 니나노 사이트 오픈 이벤트</a>
+							</div>
+						</td>
+						<td class="date">2017.03.17</td>
+						<td class="cnt">50</td>
+					</tr>
+					<tr>
+						<td class="num">2</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<a href="notice-view.html" class="tit">[이벤트] 니나노 사이트 오픈 이벤트</a>
+							</div>
+						</td>
+						<td class="date">2017.03.17</td>
+						<td class="cnt">50</td>
+					</tr>
+					<tr>
+						<td class="num">3</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<a href="notice-view.html" class="tit">[이벤트] 니나노 사이트 오픈 이벤트</a>
+							</div>
+						</td>
+						<td class="date">2017.03.17</td>
+						<td class="cnt">50</td>
+					</tr>
+					<tr>
+						<td class="num">4</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<a href="notice-view.html" class="tit">[이벤트] 니나노 사이트 오픈 이벤트</a>
+							</div>
+						</td>
+						<td class="date">2017.03.17</td>
+						<td class="cnt">50</td>
+					</tr>
+					<tr>
+						<td class="num">5</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<a href="notice-view.html" class="tit">[이벤트] 니나노 사이트 오픈 이벤트</a>
+							</div>
+						</td>
+						<td class="date">2017.03.17</td>
+						<td class="cnt">50</td>
+					</tr>
+					<tr>
+						<td class="num">6</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<a href="notice-view.html" class="tit">[이벤트] 니나노 사이트 오픈 이벤트</a>
+							</div>
+						</td>
+						<td class="date">2017.03.17</td>
+						<td class="cnt">50</td>
+					</tr>
+					<tr>
+						<td class="num">7</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<a href="notice-view.html" class="tit">[이벤트] 니나노 사이트 오픈 이벤트</a>
+							</div>
+						</td>
+						<td class="date">2017.03.17</td>
+						<td class="cnt">50</td>
+					</tr>
+					<tr>
+						<td class="num">8</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<a href="notice-view.html" class="tit">[이벤트] 니나노 사이트 오픈 이벤트</a>
+							</div>
+						</td>
+						<td class="date">2017.03.17</td>
+						<td class="cnt">50</td>
+					</tr>
+					<tr>
+						<td class="num">9</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<a href="notice-view.html" class="tit">[이벤트] 니나노 사이트 오픈 이벤트</a>
+							</div>
+						</td>
+						<td class="date">2017.03.17</td>
+						<td class="cnt">50</td>
+					</tr>
+					<tr>
+						<td class="num">10</td>
+						<td class="title left-cell">
+							<div class="ellipsis">
+								<a href="notice-view.html" class="tit">[이벤트] 니나노 사이트 오픈 이벤트</a>
+							</div>
+						</td>
+						<td class="date">2017.03.17</td>
+						<td class="cnt">50</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<div class="paging-common">
+				<a href="#" class="page-btn first">처음</a>
+				<a href="#" class="page-btn prev">이전</a>
+				<span class="paging-num">
+					<a href="#" class="on">1</a>
+					<a href="#">2</a>
+					<a href="#">3</a>
+					<a href="#">4</a>
+					<a href="#">5</a>
+				</span>
+				<a href="#" class="page-btn next">다음</a>
+				<a href="#" class="page-btn last">마지막</a>
+			</div>
+		</div>
+	</article>
+
+
+		</div>
+		<!-- // page content -->
+
+		<!-- footer // -->
+		<footer class="common-footer">
+			<h2>푸터</h2>
+			<div class="content-wrap">
+				<ul class="nav">
+					<li><a href="#">회사소개</a></li>
+					<li><a href="./privacy.html">개인정보처리방침</a></li>
+					<li><a href="./license.html">서비스 이용약관</a></li>
+				</ul>
+				<address>
+					<span class="info">
+						(주)니나노 &nbsp;
+						<span class="addr">서울시 서초구 신반포로 320-5 (우)06534 &nbsp; </span>
+						<span class="cs">고객센터 : 000.0000.0000</span>
+					</span><br>
+					<span class="copy">Copyright ⓒ NINANO All rights reserved.</span>
+				</address>
+				<p class="btn-top"><a href="#"><img src="../img/com/btn-footer-top.png" alt="TOP"></a></p>
+				<p class="btn-add"><a href="./content-add.html"><img src="../img/com/btn-footer-add.png" alt="영상 올리기"></a></p>
+			</div>
+		</footer> 
+		<!-- // footer -->
+	</div>
+
+</body>
+</html>
