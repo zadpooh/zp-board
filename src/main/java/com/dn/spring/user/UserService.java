@@ -71,7 +71,7 @@ public class UserService {
 	 */
 	public UserInfo selectUserInfoByIdAndJoinTy(UserInfo userInfo){
 		
-		selectUserCheckAndInsert(userInfo);
+		//selectUserCheckAndInsert(userInfo);
 		return userMapper.selectUserInfoByIdAndJoinTy(userInfo);
 	}
 	
@@ -94,7 +94,7 @@ public class UserService {
 	/**
 	 * 회원수정
 	 * @param userInfo
-	 */
+	 *//*
 	public String updateUserInfoAndNikNmCheck(UserInfo userInfo, HttpSession session, MultipartFile uploadFile){
 		// 회원 정보 조회
 		UserInfo userOldInfo = (UserInfo) session.getAttribute("user");
@@ -141,10 +141,10 @@ public class UserService {
 		return "SUCCESS";
 	}
 	
-	/**
+	*//**
 	 * 회원가입
 	 * @param userInfo
-	 */
+	 *//*
 	public String insertUserInfoAndIdCheckToNikNm(UserInfo userInfo){
 		
 		
@@ -196,19 +196,19 @@ public class UserService {
 		return result; 
 	}
 	
-	/**
+	*//**
 	 * 로그인 정보 업데이트
 	 * @param userInfo
-	 */
+	 *//*
 	public void updateUserInfoLogIn(UserInfo userInfo){
 		userMapper.updateUserInfoLogIn(userInfo);
 	}
 	
-	/**
+	*//**
 	 * 회원 상세정보 조회후 없으면 등록
 	 * @param userInfo
 	 * @return
-	 */
+	 *//*
 	public void selectUserCheckAndInsert(UserInfo userInfo){
 		
         String recentLoginIp = ServerUtils.remoteIp();
@@ -226,57 +226,57 @@ public class UserService {
 		
 	}
 	
-	/**
+	*//**
 	 * 회원 정보
 	 * @param userInfo
 	 * @return User
-	 */
+	 *//*
 	public int selectAllUserCount(UserInfoParam userInfoParam){
 		return userMapper.selectAllUserCount(userInfoParam);
 	}
 	
 	
-	/**
+	*//**
 	 * 회원 정보
 	 * @param userInfo
 	 * @return User
-	 */
+	 *//*
 	public ArrayList<UserInfo> selectUserList(UserInfoParam userInfoParam){
 		return userMapper.selectUserList(userInfoParam);
 	}
 	
-	/**
+	*//**
 	 * 회원 상세정보
 	 * @param userInfo
 	 * @return User
-	 */
+	 *//*
 	public ArrayList<UserInfo> selectUserDetailList(UserInfo userInfo){
 		return userMapper.selectUserDetailList(userInfo);
 	}
 	
-	/**
+	*//**
 	 * 회원 삭제
 	 * @param userInfo
 	 * @return User
-	 */
+	 *//*
 	public void selectUserDelete(String userId){
 		userMapper.selectUserDelete(userId);
 	}
 	
-	/**
+	*//**
 	 * 회원 정보
 	 * @param userInfo
 	 * @return User
-	 */
+	 *//*
 	public int selectUserNikMax(){
 		return userMapper.selectUserNikMax();
 	}
 	
-	/**
+	*//**
 	 * 
 	 * @param userInfoParam
 	 * @return
-	 */
+	 *//*
 	public String selectPasswordSearch(UserInfo userInfo){
 		
 		if(ValidationUtils.isNull(userInfo.getUserId())){
@@ -311,34 +311,34 @@ public class UserService {
 		return "SUCCESS";
 	}
 	
-	/**
+	*//**
 	 * 회원 삭제
 	 * @param userInfo
-	 */
+	 *//*
 	public void deleteUserInfo(UserInfo userInfo){
 		userMapper.deleteUserInfo(userInfo);
 	}
 	
-	/**
+	*//**
 	 * 회원 토큰 삭제
 	 * @param userInfo
-	 */
+	 *//*
 	public void deleteUserToken(UserInfo userInfo){
 		userMapper.deleteUserToken(userInfo);
 	}
 	
-	/**
+	*//**
 	 * 휴면 회원 조회
 	 * @return
-	 */
+	 *//*
 	public ArrayList<UserInfo> selectUserDiapauseList(){
 		return userMapper.selectUserDiapauseList();
 	}
 	
-	/**
+	*//**
 	 * 휴면회원으로 변경 
 	 * @param userInfo
-	 */
+	 *//*
 	public void updateDiapauseUserInfo(UserInfo userInfo){
 		userMapper.updateDiapauseUserInfo(userInfo);
 		
@@ -352,5 +352,5 @@ public class UserService {
 		
 		emailService.mailHtmlSender(email);
 		
-	}
+	}*/
 }

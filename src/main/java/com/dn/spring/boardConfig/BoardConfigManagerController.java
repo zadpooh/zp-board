@@ -1,7 +1,18 @@
-package com.dn.spring.board;
+package com.dn.spring.boardConfig;
 
-import javax.servlet.http.HttpSession;
-
+import com.dn.common.support.Pagination;
+import com.dn.common.utils.ViewUtils;
+import com.dn.spring.annotations.CheckAuth;
+import com.dn.spring.annotations.RequestProperty;
+import com.dn.spring.board.BoardService;
+import com.dn.spring.board.domain.Board;
+import com.dn.spring.board.support.BoardParam;
+import com.dn.spring.file.FileService;
+import com.dn.spring.user.domain.UserInfo;
+import com.google.gson.Gson;
+import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -10,23 +21,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.dn.common.support.Pagination;
-import com.dn.common.utils.ViewUtils;
-import com.dn.spring.annotations.CheckAuth;
-import com.dn.spring.annotations.RequestProperty;
-import com.dn.spring.board.domain.Board;
-import com.dn.spring.board.support.BoardParam;
-import com.dn.spring.file.FileService;
-import com.dn.spring.user.domain.UserInfo;
+import javax.servlet.http.HttpSession;
 
 
 @Controller
-@RequestMapping(value="/dnmanager/board")
+@RequestMapping(value="/dnmanager/board-config")
 @RequestProperty(title="게시판", layout="default")
-public class BoardManagerController {
-	
+public class BoardConfigManagerController {
+
+	Logger logger = LoggerFactory.getLogger(BoardConfigManagerController.class);
+
 	@Autowired
-	BoardService boardService;
+	BoardConfigService boardConfigService;
 	
 	@Autowired
 	FileService fileService;
@@ -36,20 +42,23 @@ public class BoardManagerController {
 	public String list(Model model
 			, BoardParam boardParam
 		) throws Exception{
-		
-		int count = boardService.selectBoardCount(boardParam);
-		
-		Pagination pagination = Pagination.getInstance(count);
-		boardParam.setPagination(pagination);
-		
-		model.addAttribute("boardList", boardService.selectBoardList(boardParam));
-		model.addAttribute("pagination", pagination);
-		model.addAttribute("boardParam", boardParam);
-		
+
+		JSONObject jsonObject = new JSONObject(boardConfigService.boardConifgList().get(0).getBoardConfigMetaData().toString());
+
+		Gson gson = new Gson();
+
+		UserInfo userInfo = gson.fromJson(jsonObject.toString(), UserInfo.class);
+
+
+		//Valeurs valeurs = gson.fromJson(json_string, Valeurs.class);
+		logger.debug("setter  : "+userInfo.getUserId());
+		logger.debug("getter  : "+gson.toJson(userInfo).toString());
+
+
 		return ViewUtils.view();
 	}
 	
-	@RequestMapping(value="/create")
+	/*@RequestMapping(value="/create")
 	@RequestProperty(title="게시판", layout="popup")
 	@CheckAuth(value=true, level=2)
 	public String create(Model model
@@ -119,7 +128,7 @@ public class BoardManagerController {
 			) throws Exception{
 		
 		return fileService.fileUploadRespone(uploadFileImage);
-	}
+	}*/
 
 }
 

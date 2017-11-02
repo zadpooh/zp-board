@@ -63,13 +63,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	            .deleteCookies("JSESSIONID")
 	            .permitAll();
 	    http.exceptionHandling().accessDeniedPage("/dnmanager/user/login?error=500");
-	    //http.sessionManagement().invalidSessionUrl("/dnmanager/user/login");
     }
     
     @Bean
     public RoleHierarchy roleHierarchy() {
         RoleHierarchyImpl roleHierarchy = new RoleHierarchyImpl();
-        roleHierarchy.setHierarchy("SUPERVISOR > MANAGER > ADMIN > USER");
+        roleHierarchy.setHierarchy("SUPERVISOR > ROLE_MANAGER > ROLE_ADMIN > ROLE_USER");
         return roleHierarchy;
     }
 

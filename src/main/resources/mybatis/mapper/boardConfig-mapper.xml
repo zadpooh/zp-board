@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+<mapper namespace="com.dn.spring.boardConfig.BoardConfigMapper">
+
+	<resultMap id="boardConfigResult" type="com.dn.spring.boardConfig.domain.BoardConfig">
+		<result property="boardConfigId" column="BOARD_CONFIG_ID" />
+		<result property="boardCode" column="BOARD_CODE" />
+		<result property="boardConfigMetaData" column="BOARD_CONFIG_META_DATA" />
+		<result property="createdDate" column="CREATED_DATE" />
+		<result property="createdUserId" column="CREATED_USER_ID" />
+		<result property="updatedDate" column="UPDATED_DATE" />
+		<result property="updatedUserId" column="UPDATED_USER_ID" />
+	</resultMap>
+	
+
+	<select id="boardConifgList" resultMap="boardConfigResult">
+		SELECT 
+			BOARD_CONFIG_ID,
+			BOARD_CODE,
+			BOARD_CONFIG_META_DATA,
+			CREATED_DATE,
+			CREATED_USER_ID,
+			UPDATED_DATE,
+			UPDATED_USER_ID
+		FROM DN_BOARD_CONFIG
+	</select>
+
+</mapper>

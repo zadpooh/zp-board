@@ -165,7 +165,7 @@ public class MakeStatementMysql {
 				String camelColumn = converToCamel(column.toLowerCase());
 				
 				if (k == 0) {
-					tableName =  "			FROM TB_" + column.replace("_ID", "") + " ";
+					tableName =  "			FROM DN_" + column.replace("_ID", "") + " ";
 				}
 				
 
@@ -218,7 +218,7 @@ public class MakeStatementMysql {
 				String camelColumn = converToCamel(column.toLowerCase());
 				
 				if (p == 0) {
-					tableName2 =  "		FROM TB_" + column.replace("_ID", "") + " \n 		WHERE "+column+" = ${"+camelColumn+"}";
+					tableName2 =  "		FROM DN_" + column.replace("_ID", "") + " \n 		WHERE "+column+" = ${"+camelColumn+"}";
 				}
 				
 	
@@ -271,7 +271,7 @@ public class MakeStatementMysql {
 				
 				String camelColumn = converToCamel(column.toLowerCase());
 				if (i == 0) {
-					dbField = dbField + "TB_" + column.replace("_ID", "") + " (";
+					dbField = dbField + "DN_" + column.replace("_ID", "") + " (";
 				}
 				
 				if (i > 0) {
@@ -336,7 +336,7 @@ public class MakeStatementMysql {
 				
 				if (i == 0) {
 					
-					sb.append("		UPDATE TB_" + column.replace("_ID", "") + " SET\n");
+					sb.append("		UPDATE DN_" + column.replace("_ID", "") + " SET\n");
 					
 				}
 		
@@ -392,7 +392,7 @@ public class MakeStatementMysql {
 				String camelColumn = converToCamel(column.toLowerCase());
 				
 				if (n == 0) {
-					tableName3 =  "TB_" + column.replace("_ID", "") + " \n		WHERE "+column+" = ${"+camelColumn+"}";
+					tableName3 =  "DN_" + column.replace("_ID", "") + " \n		WHERE "+column+" = ${"+camelColumn+"}";
 				}
 				
 				n++;
