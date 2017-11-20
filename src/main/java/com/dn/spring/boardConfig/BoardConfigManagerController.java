@@ -1,6 +1,7 @@
 package com.dn.spring.boardConfig;
 
 import com.dn.common.support.Pagination;
+import com.dn.common.utils.ServerUtils;
 import com.dn.common.utils.ViewUtils;
 import com.dn.spring.annotations.CheckAuth;
 import com.dn.spring.annotations.RequestProperty;
@@ -21,7 +22,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.io.File;
+import java.io.IOException;
 
 
 @Controller
@@ -39,22 +43,24 @@ public class BoardConfigManagerController {
 	
 	@RequestMapping(value="/list")
 	@CheckAuth(value=true, level=2)
-	public String list(Model model
-			, BoardParam boardParam
-		) throws Exception{
+	public String list(
+			Model model
+		) throws Exception, IOException{
 
-		JSONObject jsonObject = new JSONObject(boardConfigService.boardConifgList().get(0).getBoardConfigMetaData().toString());
+		File dir = new File("D:/adnstyle_dev/workspace/DeepNight/zp-board/src/main/webapp/WEB-INF/layout/board");
+		File[] fileList = dir.listFiles();
 
-		Gson gson = new Gson();
+		for(int i = 0 ; i < fileList.length ; i++){
+			File file = fileList[i];
+			if(file.isDirectory()){
+				System.out.println("디렉토리 이름 = " + file.getName());
+			}
 
-		UserInfo userInfo = gson.fromJson(jsonObject.toString(), UserInfo.class);
+		}
 
 
-		//Valeurs valeurs = gson.fromJson(json_string, Valeurs.class);
-		logger.debug("setter  : "+userInfo.getUserId());
-		logger.debug("getter  : "+gson.toJson(userInfo).toString());
-
-
+		model.addAttribute("serverHostName", ServerUtils.serverHostName());
+		model.addAttribute("boardConfigList", boardConfigService.boardConifgList());
 		return ViewUtils.view();
 	}
 	

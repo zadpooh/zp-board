@@ -15,10 +15,14 @@ public class ServerUtils {
 		return ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
 	}
 	
+	public static String serverHostName() {
+		return "http://"+getRequest().getServerName() + ( getRequest().getLocalPort() == 80 ? "" : ":"+getRequest().getLocalPort() ) ;
+	}
+
 	public static String localHostName() {
 		return "http://"+getRequest().getLocalName() + ( getRequest().getLocalPort() == 80 ? "" : ":"+getRequest().getLocalPort() ) ;
 	}
-	
+
 	public static String referer() {
 		return getRequest().getHeader("referer") == null ? "" : getRequest().getHeader("referer").split("\\?")[0];
 	}

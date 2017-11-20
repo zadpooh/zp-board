@@ -4,6 +4,7 @@
 
 	<resultMap id="boardConfigResult" type="com.dn.spring.boardConfig.domain.BoardConfig">
 		<result property="boardConfigId" column="BOARD_CONFIG_ID" />
+		<result property="boardTitle" column="BOARD_TITLE" />
 		<result property="boardCode" column="BOARD_CODE" />
 		<result property="boardConfigMetaData" column="BOARD_CONFIG_META_DATA" />
 		<result property="createdDate" column="CREATED_DATE" />
@@ -16,6 +17,7 @@
 	<select id="boardConifgList" resultMap="boardConfigResult">
 		SELECT 
 			BOARD_CONFIG_ID,
+			BOARD_TITLE,
 			BOARD_CODE,
 			BOARD_CONFIG_META_DATA,
 			CREATED_DATE,
